@@ -21,7 +21,7 @@ class Post (models.Model):
                                   default='rascunho')
 
     class Meta:
-        ordering = ("-publicado",)
+        ordering = ('-publicado',)
 
 
     def __str__(self):
