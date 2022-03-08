@@ -29,10 +29,16 @@ class Post(models.Model):
     published = PublishedManager()
 
     def get_absolute_url(self):
-        return reverse('post_detail',args=[self.slug])
+        return reverse('post_detail',args=[self.pk])
+
+    def get_absolute_url_update(self):
+        return reverse('post_edit',args=[self.pk])
 
     class Meta:
         ordering = ('-publicado',)
 
     def __str__(self):
         return self.titulo
+
+
+# Create your models here.
